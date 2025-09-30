@@ -88,6 +88,7 @@
     font-feature-settings: "rlig 1", "calt" 1;
 
   }
+
 }
 
 @utility container{
@@ -143,4 +144,16 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+    .swiper-button-next,
+  .swiper-button-prev {
+    color: hsl(var(--primary)) !important;
+  }
+.swiper-pagination-bullet {
+  background: hsl(var(--primary)) !important;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: hsl(var(--primary)) !important;
+  opacity: 1;
 }
