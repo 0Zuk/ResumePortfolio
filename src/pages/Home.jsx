@@ -16,6 +16,7 @@ export const Home = () => {
     {/*Navbar*/}
     <Navbar/>
     {/*Main Section*/}
+    <div className="pt-20">
       <main>
         <HeroSection/>
         {/*About Me Section*/}
@@ -26,8 +27,8 @@ export const Home = () => {
         <ProjectsSection/>
         {/*Contact Section*/}
         <ContactSection/>
-
       </main>
+      </div>
     {/*Footer*/}
   </div>;
 };

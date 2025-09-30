@@ -33,7 +33,7 @@ export const SkillsSection = () => {
                                     <li>C#</li>
                                     <li>ASP.net</li>
                                     <li>SQL</li>
-                                    <li>APIs</li>
+                                    <li>Minimal API</li>
                                 </ul>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export const SkillsSection = () => {
                             <div className="text-left">
                                 <h4 className="font-semibold text-lg pd-5">Infrastructure</h4>
                                 <ul className="mt-4 space-y-2 text-foreground/90 text-primary text-glow">
-                                    <li>Docker</li>
+                                    <li>CQRS</li>
                                     <li>GitHub Actions</li>
                                     <li>Git</li>
                                     <li>AWS (Soon)</li>
