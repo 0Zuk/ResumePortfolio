@@ -1,10 +1,24 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Dot } from "lucide-react"
 
 export const HeroSection = () => {
     return <section
         id="hero"
         className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
+          <div className="grid grid-cols-1 gap-6 flex justify-start opacity-0 animate-fade-in-delay-4">
+            <div className="gradient-border p-6 rocket-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10 text-primary">
+                  <circle-small className="text-primary" />
+                </div>
+                <div>
+                  <p className="text-glow text-primary">
+                    Based in Stockholm, Sweden
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
         <div className="container max-w-4xl mx-auto text-center z-10">
             <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight">

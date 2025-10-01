@@ -54,6 +54,28 @@
             opacity: 0;
         }
       }
+@keyframes rocket-fly {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-50px) rotate(-5deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-300px) rotate(-10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-500px) rotate(-15deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-700px) rotate(-20deg);
+    opacity: 0;
+  }
+}
 
 }
 @layer base {
@@ -147,6 +169,20 @@
   background: linear-gradient(to right, orange, transparent);
   box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.3);
 }
+@utility meteor-green {
+  @apply absolute rounded-full;
+  background: linear-gradient(to right, limegreen, transparent);
+  box-shadow: 0 0 10px 2px rgba(50, 205, 50, 0.4);
+}
+@layer utilities {
+  .animate-rocket-fly {
+    animation: rocket-fly 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .rocket-hover:hover {
+    animation: rocket-fly 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
 @utility text-readable {
   text-shadow:
     0 0 3px rgba(0, 0, 0, 0.8),

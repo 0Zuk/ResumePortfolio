@@ -9,7 +9,7 @@ export const StarBackground = () => {
         generateStars();
         // Detect dark mode
         const checkDark = () => {
-        setIsDark(document.documentElement.classList.contains("dark"));
+            setIsDark(document.documentElement.classList.contains("dark"));
         };
         checkDark();
         generateMeteors();
@@ -55,6 +55,7 @@ export const StarBackground = () => {
     const generateMeteors = () => {
         const numberOfMeteors = 4;
         const numberOfOrangeMeteors = isDark ? 3 : 0; // Only in dark mode
+        const numberOfGreenMeteors = isDark ? 2 : 0;
         const newMeteors = [];
 
         for (let i = 0; i < numberOfMeteors; i++) {
@@ -77,6 +78,17 @@ export const StarBackground = () => {
                 delay: Math.random() * 15,
                 animationDuration: Math.random() * 3 + 3,
                 color: 'orange',
+            });
+        }
+        for (let i = 0; i < numberOfGreenMeteors; i++) {
+            newMeteors.push({
+                id: numberOfMeteors + i,
+                size: Math.random() * 2 + 1,
+                x: Math.random() * 100,
+                y: Math.random() * 20,
+                delay: Math.random() * 15,
+                animationDuration: Math.random() * 3 + 3,
+                color: 'green',
             });
         }
         setMeteors(newMeteors);
@@ -102,7 +114,14 @@ export const StarBackground = () => {
             {meteors.map(meteor => (
                 <div
                     key={meteor.id}
-                    className={meteor.color === "orange" ? "meteor-orange animate-meteor" : "meteor animate-meteor"}
+                    className={
+                        meteor.color === "orange"
+                            ? "meteor-orange animate-meteor"
+                            : meteor.color === "green"
+                                ? "meteor-green animate-meteor"
+                                : "meteor animate-meteor"
+                    }
+
                     style={{
                         width: meteor.size * 30 + 'px',
                         height: meteor.size * 2 + 'px',
