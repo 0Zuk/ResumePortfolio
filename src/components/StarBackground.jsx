@@ -7,13 +7,14 @@ export const StarBackground = () => {
 
     useEffect(() => {
         generateStars();
-        generateMeteors();
-
         // Detect dark mode
         const checkDark = () => {
-            setIsDark(document.documentElement.classList.contains("dark"));
+        setIsDark(document.documentElement.classList.contains("dark"));
         };
         checkDark();
+        generateMeteors();
+
+
 
         const handleResize = () => {
             generateStars();
@@ -22,7 +23,7 @@ export const StarBackground = () => {
         window.addEventListener("resize", handleResize);
         window.addEventListener("classChange", checkDark);
 
-        // Listen for theme changes (if you toggle dark mode by changing the class)
+
         const observer = new MutationObserver(checkDark);
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 

@@ -13,7 +13,7 @@ export const AboutSection = () => {
           
           <div className="space-y-6">
             <h3 className="text-xl font-semibold">
-              Passionate Fullstack developer & with a creative mindset.
+              Fullstack developer & with a creative mindset.
             </h3>
 
             <p className="text-muted-foreground">
@@ -34,12 +34,12 @@ export const AboutSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-3">
-              <a href="#contact" className="cosmic-button">
+              <a href="#contact" className="cosmic-button text-readable">
                 Contact Me
               </a>
               <a
                 href="/Resume/Resume-Pontus.pdf"
-                className="cosmic-button"
+                className="cosmic-button text-readable"
                 download
               >
                 Download Resume

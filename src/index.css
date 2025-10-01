@@ -62,7 +62,8 @@
 
   --card: 0 0% 100%;
 
-  --primary: 250 47% 60%;
+  --primary: 120 70% 50%;
+
   --primary-foreground: 210 40% 98%;
 
   --border: 214 32% 91%;
@@ -73,7 +74,8 @@
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 120 70% 50%;
+
     --primary-foreground: 213 31% 91%;
     --border: 217 33% 20%;
   }
@@ -144,6 +146,14 @@
   background: linear-gradient(to right, orange, transparent);
   box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.3);
 }
+@utility text-readable {
+  text-shadow:
+    0 0 3px rgba(0, 0, 0, 0.8),
+    0 0 6px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+
 #root{
   max-width: 100%;
   margin: 0 auto;
