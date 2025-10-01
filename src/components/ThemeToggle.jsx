@@ -6,10 +6,16 @@ export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme')
-        if(savedTheme === 'dark'){
+        if (window.innerWidth < 768) {
+            document.documentElement.classList.add("dark");
+            setIsDarkMode(true);
+            localStorage.setItem("theme", "dark");
+            return;
+        }
+        if (savedTheme === 'dark') {
             document.documentElement.classList.add('dark');
             setIsDarkMode(true);
-            
+
         } else {
             document.documentElement.classList.remove('light');
             setIsDarkMode(false);
@@ -18,7 +24,7 @@ export const ThemeToggle = () => {
 
 
     const toggleTheme = () => {
-        if(isDarkMode){
+        if (isDarkMode) {
             document.documentElement.classList.remove('dark');
             localStorage.setItem('theme', 'light');
             setIsDarkMode(false);
@@ -28,16 +34,16 @@ export const ThemeToggle = () => {
             setIsDarkMode(true);
         }
     };
-    return (  
-    <button onClick={toggleTheme} className= {cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden"
-    )}>
-        {" "}
-        {isDarkMode ? (
-        <Sun className="w-6 h-6 text-yellow-300" />
-        ) : (
-        <Moon className="w-6 h-6 text-blue-900" />
-        )}
-    </button>
+    return (
+        <button onClick={toggleTheme} className={cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+            "focus:outline-hidden"
+        )}>
+            {" "}
+            {isDarkMode ? (
+                <Sun className="w-6 h-6 text-yellow-300" />
+            ) : (
+                <Moon className="w-6 h-6 text-blue-900" />
+            )}
+        </button>
     );
 };
