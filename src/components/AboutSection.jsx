@@ -13,24 +13,15 @@ export const AboutSection = () => {
           
           <div className="space-y-6">
             <h3 className="text-xl font-semibold">
-              Fullstack developer & with a creative mindset.
+              Junior Fullstack Developer with a drive to learn.
             </h3>
 
             <p className="text-muted-foreground">
-              I'm soon to graduate as a fullstack developer at Newton
-              kompetensutbildning. Some of my skills include C#, JavaScript,
-              React, Node.js, HTML, CSS, SQL and Git. I'm always open to learning
-              new technologies and improving my skills. I work well in teams and
-              I am a problem solver.
+              I'm a driven and punctual junior fullstack developer with a strong interest in technology and a natural drive to learn new things by solving real-world problems. I thrive in teams and quickly pick up new technologies and workflows — something proven through my internships where I've delivered in unfamiliar codebases and frameworks.
             </p>
 
             <p className="text-muted-foreground">
-              I'm a dedicated .Net fullstack developer with a passion for
-              crafting innovative web solutions. With expertise in both frontend
-              and backend technologies, I thrive on transforming ideas into
-              functional and visually appealing applications. My journey in web
-              development is driven by a commitment to continuous learning and a
-              desire to create seamless user experiences.
+              My technical skills range from foundational to solid across several technologies, with the most experience in .NET, C#, React, Next.js, TypeScript, Python and Django from real projects. I've built my own REST API endpoints, worked with headless architecture, and actively use AI tools and prompt engineering in my development process. I've also built my own application with a local LLM via Ollama that generated car listings based on user input.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-3">
