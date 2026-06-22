@@ -6,8 +6,9 @@ import 'swiper/css/pagination';
 
 const slideImages = [
   {
-    url: "/Slides/Passion_games.png",
-    caption: "Passion Games (Coming Soon)",
+    url: "/Slides/Bilannonser.png",
+    caption: "Bilannonser – AI-genererade bilannonser",
+    link: "https://django-bil-annonser.vercel.app/",
   },
   {
     url: "/Slides/Web_dev.png",
@@ -39,9 +40,20 @@ export const ProjectsSection = () => {
                 style={{ backgroundImage: `url(${slide.url})` }}
               >
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <span className="text-white text-xl font-semibold">
-                    {slide.caption}
-                  </span>
+                  {slide.link ? (
+                    <a
+                      href={slide.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-xl font-semibold underline hover:text-primary transition-colors"
+                    >
+                      {slide.caption}
+                    </a>
+                  ) : (
+                    <span className="text-white text-xl font-semibold">
+                      {slide.caption}
+                    </span>
+                  )}
                 </div>
               </div>
             </SwiperSlide>
